@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-4">
+                    <div class="header__logo">
+                        <a href="#"><img src="img/logo.png" alt="logo"></a>
+                        <span class="align-middle">Weather Forecast</span>
+                    </div>
+                </div>
+                <div class="col-md-6 header-menu">
+                    <div class="header__country">
+                        <label for="">Country:</label>
+                        <select id="country-change">
+                            <option disabled>Выбирите страну</option>
+                            <option selected value="UA">Україна</option>
+                            <option value="BY">Беларусь</option>
+                            <option value="RU">Россия</option>
+                            <option value="TR">Türkiye</option>
+                            <option value="EG">مصر</option>
+                            <option value="TN">تونس</option>
+                        </select>
+                    </div>
+                    <div class="header__city">
+                        <div>City:</div>
+                        <select id="city">
+                             <option value="704508">Kramatorsk</option>
+                             <option value="706483">Kharkiv</option>
+                             <option value="702550">Lviv</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-12 text-right">
+                    <h2 class="location mb-5"><span class="location__counrty">Ukraine</span>, <span class="location__city"></span></h2>
+                </div>
+                <div class="col-md">
+                    <div class="tabs-days">
+                        <div id="tabs">
+                            <ul>
+                                <li><a href="#tabs-1">Today</a></li>
+                                <li><a href="#tabs-2">for 3 days</a></li>
+                                <li><a href="#tabs-3">for 5 days</a></li>
+                            </ul>
+                            <div id="tabs-1">
+                                <ul class="tabs-2-menu card-deck">
+                                    <div class="card"><a class="tabs-2__link" href="#tabs-0">
+                                            <div class="tabs-2__date mt-3">
+                                                <span class="tabs-2-menu__time1">data</span>
+                                            </div>
+                                            <div class="tabs-2-weather">
+                                                <div class="tabs-2-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon "></img>
+                                                </div>
+                                                <div class="tabs-2-degrees font-weight-bold h1 align-middle">
+                                                    <p><span>?</span> C</p>
+                                                </div>
+                                                <div class="tabs-2-weather__options d-inline-flex">
+                                                    <p class="tabs-2-weather__pressure ml-3">Air pressure: <span></span> мм. </p>
+                                                    <p class="tabs-2-weather__temp ml-3">Humidity: <span></span> %</p>
+                                                    <p class="tabs-2-weather__wind ml-3">Wind: <span></span> м/c</p>
+                                                    <p class="tabs-2-weather__main ml-3">Precipitation: <span> </span></p>
+                                                </div>
+                                            </div>
+                                            <p class="warning "><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                        </a></div>
+                                              <iframe src="//mediarepost.ru/widget-news?cat=1&fon=gray" width="250" height="317" style="border:0; border-radius: 5px;"></iframe>
+
+                                </ul>
+                                <div id="tabs-0" class="active">
+                                    <p class="tabs-active-city h2 mt-4 mb-4 text-dark">Hourly Weather</p>
+                                    <div class="card-group">
+                                        <div class="card text-dark text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title tabs-0_table_time1 text-dark">04:00</h5>
+                                                <div class="tabs-0_table_icon1"><img src="./img/weather/dunno.png">
+                                                    <div class="h4"></div>
+                                                </div>
+                                                <p class="card-text tabs-0_table_temp1 text-dark mt-3 font-weight-bold h3"></p>
+                                                <p class="text-dark h5">Wind</p>
+                                                <p class="tabs-0_table_wind1 d-inline-block w-30"></p><span> m/s</span>
+                                                <p class="card-text text-left"><small class="text-muted ">Weather forecast may not be accurate</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card text-dark text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title tabs-0_table_time2 text-dark">04:00</h5>
+                                                <div class="tabs-0_table_icon2"><img src="./img/weather/dunno.png">
+                                                    <div class="h4"></div>
+                                                </div>
+                                                <p class="card-text tabs-0_table_temp2 text-dark mt-3 font-weight-bold h3"></p>
+                                                <p class="text-dark h5">Wind</p>
+                                                <p class="tabs-0_table_wind2 d-inline-block w-30"></p><span> m/s</span>
+                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card text-dark text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title tabs-0_table_time3 text-dark">04:00</h5>
+                                                <div class="tabs-0_table_icon3"><img src="./img/weather/dunno.png">
+                                                    <div class="h4"></div>
+                                                </div>
+                                                <p class="card-text tabs-0_table_temp3 text-dark mt-3 font-weight-bold h3"></p>
+                                                <p class="text-dark h5">Wind</p>
+                                                <p class="tabs-0_table_wind3 d-inline-block w-30"></p><span> m/s</span>
+                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card text-dark text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title tabs-0_table_time4 text-dark">04:00</h5>
+                                                <div class="tabs-0_table_icon4"><img src="./img/weather/dunno.png">
+                                                    <div class="h4"></div>
+                                                </div>
+                                                <p class="card-text tabs-0_table_temp4 text-dark mt-3 font-weight-bold h3"></p>
+                                                <p class="text-dark h5">Wind</p>
+                                                <p class="tabs-0_table_wind4 d-inline-block w-30"></p><span> m/s</span>
+                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card text-dark text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title tabs-0_table_time5 text-dark">04:00</h5>
+                                                <div class="tabs-0_table_icon5"><img src="./img/weather/dunno.png">
+                                                    <div class="h4"></div>
+                                                </div>
+                                                <p class="card-text tabs-0_table_temp5 text-dark mt-3 font-weight-bold h3"></p>
+                                                <p class="text-dark h5">Wind</p>
+                                                <p class="tabs-0_table_wind5 d-inline-block w-30"></p><span> m/s</span>
+                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card text-dark text-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title tabs-0_table_time6 text-dark">04:00</h5>
+                                                <div class="tabs-0_table_icon6"><img src="./img/weather/dunno.png">
+                                                    <div class="h4"></div>
+                                                </div>
+                                                <p class="card-text tabs-0_table_temp6 text-dark mt-3 font-weight-bold h3"></p>
+                                                <p class="text-dark h5">Wind</p>
+                                                <p class="tabs-0_table_wind6 d-inline-block w-30"></p><span> m/s</span>
+                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="tabs-2">
+
+                                <div class="tabs-2-menu card-deck">
+                                    <div class="card"><a class="tabs-2__link" id="tabs-4-link" data-toggle="modal" data-target="#myModal">
+                                            <div class="tabs-2__date mt-3">
+                                                <span class="tabs-2-menu__time1">date</span>
+                                            </div>
+                                            <div class="tabs-2-weather">
+                                                <div class="tabs-2-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <div class="tabs-2-degrees position-static">
+                                                        <p><span>25</span> C</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tabs-2-weather__options ">
+                                                    <p class="tabs-2-weather__pressure ">Air pressure: <span></span> мм.</p>
+                                                    <p class="tabs-2-weather__temp ">Humidity: <span></span> %</p>
+                                                    <p class="tabs-2-weather__wind ">Wind: <span></span> м/с</p>
+                                                    <p class="tabs-2-weather__main ">Precipitation: <span></span></p>
+                                                </div>
+                                            </div>
+
+
+                                        </a></div>
+                                    <div class="card"><a class="tabs-2__link" id="tabs-5-link" data-toggle="modal" data-target="#myModal">
+                                            <div class="tabs-2__date mt-3">
+                                                <span class="tabs-2-menu__time2">date</span>
+                                            </div>
+
+                                            <div class="tabs-2-weather">
+                                                <div class="tabs-1-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <div class="tabs-1-degrees position-static">
+                                                        <p><span>?</span> C</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tabs-2-weather__options">
+                                                    <p class="tabs-1-weather__pressure">Air pressure: <span></span> мм.</p>
+                                                    <p class="tabs-1-weather__temp">Humidity: <span></span> %</p>
+                                                    <p class="tabs-1-weather__wind">Wind: <span></span> м/с</p>
+                                                    <p class="tabs-1-weather__main">Precipitation: <span></span></p>
+                                                </div>
+                                            </div>
+
+                                        </a></div>
+                                    <div class="card"><a class="tabs-2__link" id="tabs-6-link" data-toggle="modal" data-target="#myModal">
+                                            <div class="tabs-2__date mt-3">
+                                                <span class="tabs-2-menu__time3">date</span>
+                                            </div>
+
+                                            <div class="tabs-2-weather">
+                                                <div class="tabs-3-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <div class="tabs-3-degrees position-static">
+                                                        <p><span>?</span> C</p>
+                                                    </div>
+                                                </div>
+                                                <div class="tabs-2-weather__options">
+                                                    <p class="tabs-3-weather__pressure">Air pressure: <span></span> мм.</p>
+                                                    <p class="tabs-3-weather__temp">Humidity: <span></span> %</p>
+                                                    <p class="tabs-3-weather__wind">Wind: <span></span> м/с</p>
+                                                    <p class="tabs-3-weather__main">Precipitation: <span></span></p>
+                                                </div>
+                                            </div>
+
+
+                                        </a></div>
+                                </div>
+
+                                <div id="myModal" class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <button class="close " type="button" data-dismiss="modal">X</button>
+                                                <div id="tabs-0" class="active">
+                                                    <p class="tabs-active-city h2 mt-4 mb-4 text-dark">Hourly Weather</p>
+                                                    <div class="card-group mb-3">
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time1 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon1"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp1 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind1 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted ">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time2 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon2"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp2 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind2 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time3 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon3"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp3 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind3 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time4 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon4"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp4 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind4 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time5 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon5"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp5 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind5 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time6 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon6"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp6 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind6 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <button class="btn btn-default text-right mb-3" type="button" data-dismiss="modal">Закрыть</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="tabs-3">
+                                <div class="tabs-2-menu card-deck">
+                                    <div class="card"><a class="tabs-2__link" id="tabs-7-link" data-toggle="modal" data-target="#myModal-1">
+                                            <div class="tabs-2__date">
+                                                <span class="tabs-2-menu__time1">data</span>
+                                            </div>
+                                            <div class="tabs-2-weather mb-3">
+                                                <div class="tabs-2-weather__icon ">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <p class="tabs-12-weather"></p>
+                                                    <p class="text-center"><span>?</span> C</p>
+                                                </div>
+                                            </div>
+
+                                        </a></div>
+                                    <div class="card"><a class="tabs-2__link" id="tabs-8-link" data-toggle="modal" data-target="#myModal-1">
+                                            <div class="tabs-2__date">
+                                                <span class="tabs-2-menu__time2">data</span>
+                                            </div>
+
+                                            <div class="tabs-2-weather mb-3">
+                                                <div class="tabs-1-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <p class="tabs-11-weather"></p>
+                                                    <p><span>25</span> C</p>
+                                                </div>
+                                            </div>
+
+
+                                        </a></div>
+                                    <div class="card"><a class="tabs-2__link" id="tabs-9-link" data-toggle="modal" data-target="#myModal-1">
+                                            <div class="tabs-2__date">
+                                                <span class="tabs-2-menu__time3">data</span>
+                                            </div>
+
+                                            <div class="tabs-2-weather mb-3">
+                                                <div class="tabs-3-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <p class="tabs-13-weather"></p>
+                                                    <p><span>?</span> C</p>
+                                                </div>
+                                            </div>
+
+
+                                        </a></div>
+                                    <div class="card"><a class="tabs-2__link" id="tabs-10-link" data-toggle="modal" data-target="#myModal-1">
+                                            <div class="tabs-2__date">
+                                                <span class="tabs-2-menu__time4">data</span>
+                                            </div>
+
+                                            <div class="tabs-2-weather mb-3">
+                                                <div class="tabs-4-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <p class="tabs-14-weather"></p>
+                                                    <p><span>?</span> C</p>
+                                                </div>
+                                            </div>
+
+
+                                        </a></div>
+                                    <div class="card"><a class="tabs-2__link" id="tabs-11-link" data-toggle="modal" data-target="#myModal-1">
+                                            <div class="tabs-2__date">
+                                                <span class="tabs-2-menu__time5">data</span>
+                                            </div>
+
+                                            <div class="tabs-2-weather mb-3">
+                                                <div class="tabs-5-weather__icon">
+                                                    <img src="./img/weather/dunno.png" class="ow-icon"></img>
+                                                    <p class="tabs-15-weather"></p>
+                                                    <p><span>?</span> C</p>
+                                                </div>
+                                            </div>
+
+                                        </a></div>
+                                </div>
+                                <div id="myModal-1" class="modal fade">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-body">
+                                                <button class="close" type="button" data-dismiss="modal">×</button>
+                                                <div id="tabs-0" class="active">
+                                                    <p class="tabs-active-city h2 mt-4 mb-4 text-dark">Hourly Weather</p>
+                                                    <div class="card-group mb-3">
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time1 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon1"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp1 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind1 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted ">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time2 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon2"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp2 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind2 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time3 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon3"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp3 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind3 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time4 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon4"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp4 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind4 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time5 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon5"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp5 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind5 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card text-dark text-center">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title tabs-0_table_time6 text-dark">04:00</h5>
+                                                                <div class="tabs-0_table_icon6"><img src="./img/weather/dunno.png">
+                                                                    <div class="h4"></div>
+                                                                </div>
+                                                                <p class="card-text tabs-0_table_temp6 text-dark mt-3 font-weight-bold h3"></p>
+                                                                <p class="text-dark h5">Wind</p>
+                                                                <p class="tabs-0_table_wind6 d-inline-block w-30"></p><span> m/s</span>
+                                                                <p class="card-text text-left"><small class="text-muted">Weather forecast may not be accurate</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <button class="btn btn-default text-right mb-3" type="button" data-dismiss="modal">Закрыть</button> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+                <div class="col">
+                    <p>Created with the support of the site: <a href="https://openweathermap.org/.">https://openweathermap.org/.</a></p>
+                    <p class="name">Vlasenko Nikita</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
